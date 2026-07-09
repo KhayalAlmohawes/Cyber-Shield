@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Awareness Library </title>
+    <!-- css -->
+ <link rel="stylesheet" href="style.css">
+ <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>.back-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(255,255,255,0.28);
+    border-radius: 50%;
+    margin-right: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.back-icon-btn:hover {
+    border-color: rgba(255,255,255,0.55);
+    transform: translateX(-3px);
+}
+
+.back-icon {
+    width: 18px;
+    height: 18px;
+}</style>
+</head>
+<body>
+<div class="navbar">
+
+<img class="logo" src="imge\Group 4.svg"alt="logo"width="20px">
+<ul class="nav-item">
+<li class="link" >
+<a href="index.php">Home</a>  
+</li>
+<li class="link">
+<a href="signuppage.php">join us</a>  
+</li>
+<a href="Administrator.php" class="back-icon-btn">
+    <svg class="back-icon" viewBox="0 0 24 24">
+        <path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a>
+</div><!-- nav close -->
+<H1 class="sentencs"><span class="green" >Knowledge  </span>is Your Best  <span class="blue" >Defense</span></H1>
+
+<div class="admin-cards">
+
+<div class="admin-card">
+<a href="awareness_videos.php" target="_blank">
+<img src="imge/av.png" alt="">
+</a>
+</div>
+<div class="admin-card">
+<a href="Best_Practices.html"target="_blank">
+<img src="imge/BS.jpg" alt="">
+</a></div>
+<div class="admin-card">
+    <a href="quiz.php">
+        <img src="imge/SQ.png" alt="">
+    </a>
+</div>
+
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <img class="logo-footer" src="imge\logofotter.svg"alt="logo"width="60px">
+
+    <ul class="footer-item">
+<li class="link-footer" >
+    <img src="imge\call.svg"width="30px">
+<a href="0501092200">0501092200</a>  
+</li>
+<li class="link-footer">
+    <img src="imge\email icon.svg"width="30px">
+<a href="mailto:cybershield.platform@gmail.com">cybershield.platform</a>  
+</li>
+
+<li class="link-footer">
+<a href="policy.html">privacy policy</a>  
+</li>
+<li class="link-footer">
+<a href="Terms&conditions.html">Terms&conditions</a>  
+</li>
+ </ul>
+</div>
+
+
+
+
+
+      <!-- jc -->
+ <script src="main.js"></script>
+ <script>
+// ============ أسئلة الكويز ============
+const quizData = [
+    { q: "What should you always check when receiving an unknown email?",
+      answers: ["The design", "The emojis", "The sender’s email address", "The colors"],
+      correct: 2,
+      reason: "Phishers copy official emails but change small details in the address."
+    },
+    { q: "A message says: “Urgent! Update your password NOW!” What does this indicate?",
+      answers: ["Normal message", "Newsletter", "Fear-based phishing", "System alert"],
+      correct: 2,
+      reason: "Hackers use urgency to make you panic and click."
+    },
+    { q: "You receive a shortened link (bit.ly). What should you do?",
+      answers: ["Click it", "Ignore it", "Report it", "Open it in new tab"],
+      correct: 2,
+      reason: "Shortened links can hide dangerous URLs."
+    },
+    { q: "How to verify an email from IT Support?",
+      answers: ["Reply to email", "Click the link", "Contact IT directly", "Open attachment"],
+      correct: 2,
+      reason: "Phishers pretend to be IT. Always verify through official channels."
+    },
+    { q: "Which action is a red flag in an email?",
+      answers: ["Greeting", "Asking for password", "Company logo", "Friendly tone"],
+      correct: 1,
+      reason: "No real team will ever ask for your credentials."
+    },
+    { q: "Hover link shows different URL than text. This means:",
+      answers: ["Safe link", "Normal", "Suspicious", "Browser bug"],
+      correct: 2,
+      reason: "Phishing emails hide malicious links behind normal text."
+    },
+    { q: "Email has grammar mistakes. This indicates:",
+      answers: ["Trusted", "Phishing", "Official", "Urgent"],
+      correct: 1,
+      reason: "Most phishing messages are poorly written."
+    },
+    { q: "You won a free phone! What should you do?",
+      answers: ["Click link", "Reply", "Delete/report", "Share with friends"],
+      correct: 2,
+      reason: "Fake rewards are a common phishing trick."
+    },
+    { q: "Bank email asks to confirm your card via link. What do you do?",
+      answers: ["Click it", "Ignore", "Visit bank manually", "Reply to email"],
+      correct: 2,
+      reason: "Banks never ask verification through external links."
+    },
+    { q: "Attachment from unknown sender. Safest action?",
+      answers: ["Open it", "Scan it", "Ignore", "Do not open"],
+      correct: 3,
+      reason: "Unknown attachments may contain malware."
+    }
+];
+
+let current = 0;
+let score = 0;
+
+// عناصر من الصفحة
+const quizCard   = document.getElementById("quizCard");
+const quizModal  = document.getElementById("quizModal");
+const resultModal = document.getElementById("resultModal");
+const nextBtn    = document.getElementById("next-btn");
+const closeBtn   = document.getElementById("closeQuiz");
+const questionBox = document.getElementById("question-box");
+
+// ============ تشغيل الكويز عند الضغط على الكارد ============
+quizCard.onclick = function() {
+    quizModal.style.display = "flex";
+    current = 0;
+    score = 0;
+    loadQuestion();
+}
+
+// ============ تحميل السؤال ============
+function loadQuestion() {
+    const q = quizData[current];
+
+    questionBox.innerHTML = `
+        <h3>${q.q}</h3>
+        ${q.answers.map((a, i) => `<div class='answer' onclick='checkAnswer(${i})'>${a}</div>`).join("")}
+        <div id="reasonBox"></div>
+    `;
+}
+
+// ============ التحقق من الإجابة ============
+function checkAnswer(i) {
+    const q = quizData[current];
+    const answers = document.querySelectorAll(".answer");
+
+    answers.forEach((el, index) => {
+        if (index === q.correct) el.classList.add("correct");
+        if (index === i && i !== q.correct) el.classList.add("wrong");
+        el.style.pointerEvents = "none";
+    });
+
+    if (i === q.correct) score++;
+    
+    document.getElementById("reasonBox").innerHTML =
+        `<p class='reason'><b>Why?</b> ${q.reason}</p>`;
+}
+
+// ============ زر التالي ============
+nextBtn.onclick = () => {
+    if (current < quizData.length - 1) {
+        current++;
+        loadQuestion();
+    } else {
+        showResult();
+    }
+};
+
+// ============ النتيجة ============
+function showResult() {
+    quizModal.style.display = "none";
+    resultModal.style.display = "flex";
+    document.getElementById("result-text").innerHTML =
+        `You scored <b>${score} / 10</b>`;
+}
+
+// ============ زر الإغلاق ============
+closeBtn.onclick = () => {
+    resultModal.style.display = "none";
+};
+</script>
+
+</body>
+</html>

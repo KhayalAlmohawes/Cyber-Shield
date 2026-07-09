@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security Best Practices | Cyber Shield</title>
+
+    <style>
+        body {
+            background: #010824;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
+
+        .grid-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #021939;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background: #032a5a;
+        }
+
+        .card img {
+            width: 100%;
+            height: 215px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 16px 18px;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            opacity: 0.85;
+            line-height: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Accordion content (hidden by default) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            padding: 0 18px;
+        }
+
+        .accordion-content p {
+            font-size: 14px;
+            opacity: 0.9;
+            margin: 12px 0 20px;
+        }
+
+        .show-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #2ECFC5;
+            color: black;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+        }
+
+        .show-btn:hover {
+            background: #1aa89f;
+        }
+        
+    .back-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid rgba(255,255,255,0.28);
+    border-radius: 50%;
+    margin-right: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.back-icon-btn:hover {
+    border-color: rgba(255,255,255,0.55);
+    transform: translateX(-3px);
+}
+
+.back-icon {
+    width: 18px;
+    height: 18px;
+}</style>
+
+    
+ <!-- css -->
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+
+<img class="logo" src="imge\Group 4.svg"alt="logo"width="20px">
+<ul class="nav-item">
+<li class="link" >
+<a href="index.php">Home</a>  
+</li>
+<li class="link">
+<a href="signuppage.php">join us</a>  
+</li>
+<a href="Awareness Library.html" class="back-icon-btn">
+    <svg class="back-icon" viewBox="0 0 24 24">
+        <path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a>
+
+</div><!-- nav close -->
+<h1>Security Best Practices</h1>
+
+<div class="grid-container">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <img src="imge/best1.png" alt="">
+        <div class="card-content">
+            <h3>Strong Passwords</h3>
+            <p>Create long, unique passwords to protect your accounts.</p>
+            <button class="show-btn" onclick="toggleAccordion(this)">Show More</button>
+        </div>
+
+        <div class="accordion-content">
+            <p>
+                Use complex passwords with a combination of letters, numbers, and symbols. 
+                Avoid reusing passwords across multiple accounts. Consider using a password manager 
+                to store your credentials securely.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img src="imge/best2.png" alt="">
+        <div class="card-content">
+            <h3>Think Before You Click</h3>
+            <p>Verify sources before opening links or attachments.</p>
+            <button class="show-btn" onclick="toggleAccordion(this)">Show More</button>
+        </div>
+
+        <div class="accordion-content">
+            <p>
+                Always check the sender’s email address, hover over links to preview them, 
+                and avoid downloading unknown attachments. Attackers often disguise malicious links 
+                as trusted ones.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img src="imge/best3.png" alt="">
+        <div class="card-content">
+            <h3>Lock Your Device</h3>
+            <p>Keep your device secure when leaving your desk.</p>
+            <button class="show-btn" onclick="toggleAccordion(this)">Show More</button>
+        </div>
+
+        <div class="accordion-content">
+            <p>
+                Always lock your device when stepping away. This prevents unauthorized access 
+                to sensitive information. Enable auto-lock features for additional security.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card">
+        <img src="imge/best4.png" alt="">
+        <div class="card-content">
+            <h3>USB Safety</h3>
+            <p>Do not connect unknown USB devices.</p>
+            <button class="show-btn" onclick="toggleAccordion(this)">Show More</button>
+        </div>
+
+        <div class="accordion-content">
+            <p>
+                Unknown USB drives may contain malware that can infect your system instantly. 
+                Always use authorized and verified storage devices only.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card">
+        <img src="imge/best5.png" alt="">
+        <div class="card-content">
+            <h3>Data Protection</h3>
+            <p>Safeguard sensitive and confidential data.</p>
+            <button class="show-btn" onclick="toggleAccordion(this)">Show More</button>
+        </div>
+
+        <div class="accordion-content">
+            <p>
+                Encrypt sensitive files and never share confidential information via unsecured 
+                communication channels. Always follow your organization's data protection policy.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card">
+        <img src="imge/best6.png" alt="">
+        <div class="card-content">
+            <h3>Secure Your Devices</h3>
+            <p>Keep systems updated and protected.</p>
+            <button class="show-btn" onclick="toggleAccordion(this)">Show More</button>
+        </div>
+
+        <div class="accordion-content">
+            <p>
+                Regular updates ensure your device has the latest security patches. 
+                Install trusted antivirus software and avoid downloading unknown applications.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleAccordion(btn) {
+    const content = btn.parentElement.nextElementSibling;
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        btn.innerText = "Show More";
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        btn.innerText = "Show Less";
+    }
+}
+</script>
+
+</body>
+</html>
