@@ -52,11 +52,18 @@ The platform aims to enhance cybersecurity awareness and help organizations meas
 ## View Reportss page
 <img width="740" height="407" alt="image" src="https://github.com/user-attachments/assets/de58d434-dd24-43f9-ad05-2538f8644def" />
 
+## Launch Campaign page
+<img width="751" height="407" alt="image" src="https://github.com/user-attachments/assets/01acc5ab-31fd-4e8a-aa77-f3432e1827a6" />
+
 ## Employee main page
 <img width="746" height="407" alt="image" src="https://github.com/user-attachments/assets/8dc592c6-a5bd-479c-92cd-2b4920dfb681" />
 
 ## Security Awareness Level page
 <img width="749" height="407" alt="image" src="https://github.com/user-attachments/assets/86589663-5599-4750-a611-eda5f9d1fa4e" />
+
+## Report page
+<img width="751" height="407" alt="image" src="https://github.com/user-attachments/assets/8771a625-b535-4197-9ebc-10b26f1bd758" />
+
 
 ## Example of a phishing email
 <img width="733" height="407" alt="image" src="https://github.com/user-attachments/assets/1364262e-2fb0-4abf-a4a1-07d8a11cb3cb" />
